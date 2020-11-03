@@ -30,7 +30,7 @@ end
 
 
 
-def position_taken?(board,position)
+def position_taken?(board,index)
   if board[position] == " "
     false
     elsif board[position] == ""
