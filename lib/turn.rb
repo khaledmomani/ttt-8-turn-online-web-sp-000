@@ -16,17 +16,7 @@ def input_to_index(user_input)
 end
 
 
-def move(board, index, current_player = "X")
-    board [index] = current_player
-  end
-  
-  def valid_move?(board,index)
-  if  inxdex.to_i.between?(1,9) && position_taken?
-    true
-  else
-     false
-  end
-end
+
 
 
 
