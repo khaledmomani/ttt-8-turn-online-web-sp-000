@@ -1,6 +1,5 @@
-def turn
-
-  def display_board(board)
+#Displays TTT board 
+def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
   puts " #{board[3]} | #{board[4]} | #{board[5]} "
@@ -8,7 +7,7 @@ def turn
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-
+#Input to index conversion
 def input_to_index(user_input)
   user_input.to_i - 1
   index -= 1
@@ -42,8 +41,21 @@ def valid_move?(board, index)
 end
 
 
-
+#Puts X or O 
 def move(board, index, character = "X")
   board {index = character
   return board
+end
+
+#Asks for number loop
+def turn (board)
+  puts "Please enteter 1-9:"
+  num = gets.chomp
+  index = input_to_index (num)
+  if valid_move? (board, index) == true
+    move(board,index) == true
+    display_board(board)
+  else
+    turn(board)
+  end
 end
